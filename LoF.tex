@@ -1,0 +1,82 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{titling}
+\usepackage{mathtools}
+
+
+\setlength{\droptitle}{-10em}
+
+\title{The Laws of Form}
+\author{George Spencer-Brown \thanks{\LaTeX{} notation by Izak Hudnik}}
+
+\newcommand\CROSS[1]{%
+  \hbox{%
+    \vbox{
+      \hrule
+      \kern2pt
+      \hbox{$#1$ \strut \kern-5pt }
+    }%
+  \vrule
+  }\mskip\thickmuskip
+}
+
+\newcommand\CROSSALGEBRAIC[1]{%
+  \hbox{%
+    \vbox{
+      \hrule
+      \kern2pt
+      \hbox{\,\,\,$#1$ \! \strut}
+    }%
+  \vrule
+  }\mskip\thickmuskip
+}
+
+\newcommand\CROSSEMPTY[0]{%
+  \hbox{%
+    \vbox{
+      \hrule
+      \kern2pt
+      \hbox{ \, \, \! \! \strut}
+    }%
+  \vrule
+  }\mskip\thickmuskip
+}
+
+\begin{document}
+
+\maketitle
+
+\textbf{
+\newline 1. The Law of Calling:\quad}
+\( \CROSSEMPTY \CROSSEMPTY \)
+
+\textbf{
+\newline\newline  2. The Law of Crossing:\quad}
+\( \CROSS{ \CROSSEMPTY } \)
+
+
+\textbf{
+\newline\newline  3. Arithmetic Expression:\quad}
+\(  \CROSS{ \CROSS{ \CROSSEMPTY \CROSSEMPTY } } \CROSS{\CROSSEMPTY} \)
+
+\textbf{
+\newline\newline  4. Algebraic Expression:\quad}
+\( \CROSS{ \CROSSALGEBRAIC{ \CROSSALGEBRAIC{ \, b  } \, \, a } } \)
+
+\textbf{
+\newline\newline  5. Self-referential expression:\quad}
+\( f = \CROSSALGEBRAIC{f} \)
+
+\textbf{
+\newline\newline  5. Solve an expression:\quad}
+\begin{align*}
+\\ \CROSS{ \CROSS{ \CROSSEMPTY \CROSSEMPTY } } \CROSS{\CROSSEMPTY} &= \CROSS{ \CROSS{ \CROSSEMPTY } } \CROSS{\CROSSEMPTY} \\[3pt]
+\\ &= \CROSSEMPTY \CROSS{\CROSSEMPTY} \\[3pt]
+\\ &= \CROSSEMPTY \\[3pt]
+\end{align*} 
+
+
+
+\end{document}
